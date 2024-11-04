@@ -1,0 +1,71 @@
+:root {
+  --main-color: purple;
+  --section-transition: 0.3s;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: #eee;
+}
+.container {
+  width: 90%;
+  margin: 50px auto;
+  text-align: center;
+}
+.container .form {
+  background-color: var(--main-color);
+  width: 90%;
+  display: flex;
+  margin: 0 auto;
+  padding: 5px;
+}
+.container .form input {
+  padding: 8px;
+  border: none;
+  outline: none;
+}
+.container .form input[type="text"] {
+  width: 100%;
+}
+.container .form input[type="submit"] {
+  margin-left: 4px;
+  background-color: white;
+}
+.container .tasks {
+  width: 90%;
+  background-color: white;
+  margin: 15px auto;
+  padding: 30px;
+}
+.container .tasks .task {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+}
+.container .tasks .task:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+.container .tasks .task .fa-check-circle {
+  margin-right: 8px;
+  font-size: 14px;
+}
+.container .tasks .task .del {
+  cursor: pointer;
+  transition: var(--section-transition);
+}
+.container .tasks .task .del:hover {
+  color: var(--main-color);
+}
+.container .tasks .task.done p {
+  text-decoration: line-through;
+  color: #777;
+}
+.container .tasks .task.done .fa-check-circle {
+  color: royalblue;
+}
